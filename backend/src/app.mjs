@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import logger from './logger.mjs';
 import { initDb } from './db.mjs';
 import eventsRouter   from './routes/events.mjs';
@@ -11,6 +12,7 @@ const PORT = process.env.PORT || 3000;
 /* ------------------------------------------------------------------ */
 /*  Global middleware                                                   */
 /* ------------------------------------------------------------------ */
+app.use(cors());
 app.use(express.json());
 
 // Request logger
