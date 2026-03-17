@@ -60,13 +60,23 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
+  padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   background: rgba(10,10,10,0.92);
   backdrop-filter: blur(12px);
   z-index: 100;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .logo {
@@ -229,4 +239,20 @@ main {
   border-top: 1px solid var(--border);
   margin: 2rem 0;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .site-footer {
+    padding: 1rem 1.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
 </style>
